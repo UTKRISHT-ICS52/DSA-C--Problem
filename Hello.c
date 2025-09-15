@@ -279,7 +279,7 @@ int main() {
     return 0;
 }
 
-*/
+
 // Array Implementation in C 
 #include <stdio.h>
 
@@ -307,10 +307,15 @@ int main() {
 
     return 0;
 }
-
-
-
- 
+*/
+#include<stdio.h>
+int main(){
+    int a[5]= {2,4,5,6,7,8};
+    for(int i=0;i<5; i++){
+        printf(" a[%d]=%d\n", i, a[i]);
+    }
+    return 0;
+}
 
 
 
