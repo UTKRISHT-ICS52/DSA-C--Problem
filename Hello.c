@@ -307,7 +307,8 @@ int main() {
 
     return 0;
 }
-*/
+
+
 #include<stdio.h>
 int main(){
     int a[5]= {2,4,5,6,7,8};
@@ -317,6 +318,48 @@ int main(){
     return 0;
 }
 
+*/
+// Binary Search In C 
+#include <stdio.h>
 
+int binarySearch(int arr[], int left, int right, int key) {
+  
+    while (left <= right) {
+
+        // calculating mid point
+        int mid = left + (right - left) / 2;
+
+        // Check if key is present at mid
+        if (arr[mid] == key) {
+            return mid;
+        }
+
+        // If key greater than arr[mid], ignore left half
+        if (arr[mid] < key) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};
+    int size = sizeof(arr) / sizeof(arr[0]);
+  
+    // Element to be searched
+    int key = 23;
+  
+    int result = binarySearch(arr, 0, size - 1, key);
+    if (result == -1) {
+        printf("Element is not present in array");
+    }
+    else {
+        printf("Element is present at index %d", result);
+    }
+    return 0;
+}
 
 
