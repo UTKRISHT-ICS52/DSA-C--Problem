@@ -25,7 +25,7 @@ This repository helps beginners and intermediate learners strengthen core DSA co
 ## 🛠 How to Use
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/DSA-C-Problem
+   git clone https://github.com/UTKRISHT-ICS52/DSA-C-Problem
    ```
 
 2. Open any program and compile it:
