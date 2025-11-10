@@ -598,7 +598,7 @@ int main(void) {
         printf("\n Program terminated By Utkrisht Patel 245ICS052" );
     return 0;
 }  
-*/
+
 // TO search a number in Array using *Binary Search* 
 #include <stdio.h>
 
@@ -637,3 +637,4 @@ int main() {
  printf("\n Program terminated By Utkrisht Patel 245ICS052" );
 }
 
+*/
