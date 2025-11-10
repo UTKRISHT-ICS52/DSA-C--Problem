@@ -538,7 +538,7 @@ int dequeue(Queue* q) {
     return value;
 }
 
-*/
+
 // Linear Search in C 
 #include <stdio.h> 
 int main()
@@ -568,5 +568,72 @@ int main()
       printf("%d is present %d times in the array.\n", search,count);
      
    return 0;
+}
+
+
+// TO search a number in Array using *Linear Search* 
+#include <stdio.h>
+
+int search(int arr[], int n, int x) {
+    
+    // Iterate over the array in order to
+    // find the key x
+    for (int i = 0; i < n; i++)
+        if (arr[i] == x)
+            return i;
+    return -1;
+}
+
+// Driver code
+int main(void) {
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    // Function call
+    int result = search(arr, n, x);
+    (result == -1)
+        ? printf("Element is not present in array")
+        : printf("Element is present at index %d", result);
+        printf("\n Program terminated By Utkrisht Patel 245ICS052" );
+    return 0;
+}  
+*/
+// TO search a number in Array using *Binary Search* 
+#include <stdio.h>
+
+int binarySearch(int arr[], int n, int x) {
+    int low = 0;
+    int high = n-1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        // Check if x is present at mid
+        if (arr[mid] == x)
+            return mid;
+
+        // If x greater, ignore left half
+        if (arr[mid] < x)
+            low = mid + 1;
+
+        // If x is smaller, ignore right half
+        else
+            high = mid - 1;
+    }
+
+    // If we reach here, then element was not present
+    return -1;
+}
+
+int main() {
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int result = binarySearch(arr, n, x);
+    if(result == -1) 
+    printf("Element is not present in array");
+    else
+     printf("Element is present at index %d",result);
+ printf("\n Program terminated By Utkrisht Patel 245ICS052" );
 }
 
